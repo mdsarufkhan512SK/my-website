@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Saruf Khan | Portfolio</title>
+    <!-- Google Fonts for stylish typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f1f5f9;
+            --accent-color: #38bdf8;
+            --secondary-accent: #0ea5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Hero Section with Profile Image */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-img-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+            cursor: pointer;
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Hover effect: Zoom image when mouse over */
+        .profile-img-container:hover img {
+            transform: scale(1.2);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--accent-color);
+        }
+
+        .typing-box {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            min-height: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Main Content Grid */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Tech Stack Labels */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .skill {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Contact & Social Links */
+        .contact-links {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .contact-links li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+            transform: translateX(10px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-img-container {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="profile-img-container">
+            <!-- Your uploaded picture -->
+            <img src="1000008210.jpg (1).jpeg" alt="MD Saruf Khan">
+        </div>
+        <h1>I am <span>MD Saruf Khan</span></h1>
+        <div class="typing-box" id="typing"></div>
+        <p>Student At<strong>Khulna Polytechnic Institute (KPI)</strong></p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <!-- Education Card -->
+            <div class="card">
+                <h2>Education</h2>
+                <p><strong>Dept:</strong> Computer Science & Technology (CST)</p>
+                <p><strong>Institution:</strong> Khulna Polytechnic Institute</p>
+            </div>
+
+            <!-- Tech Stack Card -->
+            <div class="card">
+                <h2>Tech Stack</h2>
+                <p>Focusing on Python development and modern web tools:</p>
+                <div class="skills-list">
+                    <span class="skill">Python</span>
+                    <span class="skill">VS Code</span>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="card">
+                <h2>Contact Me</h2>
+                <ul class="contact-links">
+                    <li><a href="mailto:your-email@gmail.com">📧 Email: your-email@gmail.com</a></li>
+                    <li><a href="tel:+880123456789">📞 Phone: +880 19867-11182</a></li>
+                    <li><a href="https://facebook.com/yourprofile" target="_blank">🔵 Facebook Profile
+                            https://www.facebook.com /saruf.khan.246360</a></li>
+                    <li><a href="https://github.com/yourusername" target="_blank">🐙 GitHub Profile
+                            [https://github.com/ mdsarufkhan512SK](https://github.com/ mdsarufkhan512SK)</a></li>
+                </ul>
+            </div>
+
+            <!-- Career Goals Section -->
+            <div class="card" style="grid-column: 1 / -1;">
+                <h2>Future Vision</h2>
+                <p>My ultimate goal is to become a successful <strong>Software Engineer</strong>. I am working hard to
+                    evolve into a professional <strong>Full Stack Developer</strong>. I love solving complex
+                    mathematical problems and converting them into clean, efficient code.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 | Designed & Built by MD Saruf Khan</p>
+    </footer>
+
+    <script>
+        const typingElement = document.getElementById('typing');
+        const texts = [
+            "Python Developer.",
+            "Aspiring Software Engineer.",
+            "Full Stack Developer in making."
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+
+        function typeEffect() {
+            if (charIndex < texts[textIndex].length) {
+                typingElement.textContent += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else {
+                setTimeout(eraseEffect, 2000);
+            }
+        }
+
+        function eraseEffect() {
+            if (charIndex > 0) {
+                typingElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseEffect, 50);
+            } else {
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeEffect, 500);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+</body>
+
+</html>
